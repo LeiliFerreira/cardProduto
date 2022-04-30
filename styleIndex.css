@@ -1,0 +1,176 @@
+@import  url ( 'https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap' );
+
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	font-family :  'Poppins' , sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	min-height: 100vh; 
+	background: linear-gradient(#aa5377, #aa5377 50%, #fff 50%, #fff 100%);  
+}
+
+.card {
+	position: relative; 
+	width: 300px; 
+	height: 388px;
+	background: #000; 
+	box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); 
+	display: flex;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+	width: 600px;
+}
+
+.card .imagemBox {
+	position: relative; 
+	min-width: 300px; 
+	height: 100%; 
+	background: #fff;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	overflow: hidden;
+	z-index: 2;
+}
+
+.card .imagemBox img {
+	max-width: 250px; 
+	transition: 0.5s ease-in-out; 
+}
+
+.card:hover .imagemBox img {
+	transform: rotate(-35deg) translateX(-20px);
+}
+
+.card .detalhes {
+	position: absolute;
+	left: 0;
+	width: 300px; 
+	height: 100%; 
+	background: #aa5377;
+	display: flex; 
+	justify-content: center; 
+	/*align-items: center; */
+	padding: 20px;
+	flex-direction: column;
+	z-index: 1;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover .detalhes{
+	left: 300px;
+}
+
+.card .detalhes::before {
+	content: ''; 
+	position: absolute;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent; 
+	border-bottom: 10px solid transparent; 
+	border-left: 10px solid #fff;
+}
+
+.card .detalhes h3 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.5em; 
+	line-height: 1em; 
+}
+
+.card .detalhes h3 span{
+	font-size: 0.65em; 
+	font-weight: 300; 
+	text-transform: none; 
+	opacity: 0.85; 
+}
+
+.card .detalhes h4 {
+	color: #fff; 
+	text-transform: uppercase;
+	font-weight: 600; 
+	font-size: 0.9em; 
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 1em;
+}
+
+.card .detalhes p{
+	color: #fff;
+	opacity: 0.85; 
+	font-size: 0.8em; 	
+}
+
+.card .detalhes .listaTamanho {
+	display: flex; 
+	gap: 10px;
+}
+
+.card .detalhes .listaTamanho li {
+	list-style: none; 
+	color: #fff;
+	font-size: 0.9em; 
+	width: 40px; 
+	height: 40px; 
+	border: 2px solid #fff;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	font-weight: 500; 
+	opacity: 0.5; 
+	transition: 0.5s; 
+}
+
+.card .detalhes .listaTamanho li:hover {
+	cursor: pointer;
+	color: #aa5377;
+	background: #fff;
+	opacity: 1;
+
+}
+
+.card .detalhes .preco {
+	position: relative;
+	display: flex; 
+	justify-content: space-between;
+	align-items: center; 
+	margin-top: 20px; 
+}
+
+.card .detalhes .preco h2{
+	color: #fff;
+	font-weight: 600; 
+	font-size: 2em;
+}
+
+.card .detalhes .detalhesPagamento p{
+	opacity: 0.85; 
+	color: #fff;
+	margin-top: 3px;
+}
+
+.card .detalhes .botaoComprar input[type="submit"]{
+	cursor: pointer;
+	font-size: 14px;
+	display: inline-flex;
+	padding: 10px 25px;
+	background-color: #fff;
+	color: #aa5377;
+	border:none;
+	margin-top: 10px;
+	margin-left: 155px;
+}
+
+
+
